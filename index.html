@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Bot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Page background */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #2c2c2c, #3a3a3a, #444, #2b2b2b);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      font-family: "Segoe UI", sans-serif;
+      color: #e0e0e0;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Main card */
+    .card {
+      background: rgba(50, 50, 50, 0.9);
+      border: 1px solid #555;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      width: 350px;
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Bot avatar */
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #666;
+      margin-bottom: 1rem;
+      animation: popIn 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #bbb;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Buttons */
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      background: #5a5a5a;
+      color: #fff;
+      border: none;
+      border-radius: 0.8rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.6s ease forwards;
+    }
+
+    .btn:nth-child(1) { animation-delay: 0.4s; }
+    .btn:nth-child(2) { animation-delay: 0.6s; }
+    .btn:nth-child(3) { animation-delay: 0.8s; }
+    .btn:nth-child(4) { animation-delay: 1s; }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn:hover {
+      background: #6a6a6a;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://images-ext-1.discordapp.net/external/PEWiBgI3guUJKMghJG31qEyIQ6uaYTAM3nvp7W9H-8Q/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1385408322156368045/cf12e79b5cf8e1b4d1fd90941f3ed20b.png?width=1412&height=1412" alt="Bot Avatar" class="avatar">
+    <h1>Lead Bot</h1>
+    <p>A multipurpose Discord bot for moderation, fun, and automation.</p>
+
+    <div class="buttons">
+      <button class="btn"><i class="fa-solid fa-link"></i> Invite Bot</button>
+      <button class="btn"><i class="fa-solid fa-code"></i> Commands</button>
+      <button class="btn"><i class="fa-solid fa-book"></i> Documents</button>
+      <button class="btn"><i class="fa-brands fa-discord"></i>Server</button>
+    </div>
+  </div>
+</body>
+</html
